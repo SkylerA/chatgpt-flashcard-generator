@@ -20,9 +20,7 @@ While prepping for some coding interviews, I wanted to refresh my knowledge of s
 
 ## The Barebones Prompt
 
-```
-You are a [INSERT LANGUAGE] expert doing tech interviews. Come up with 20 questions and answers that you would use in a typical interview to assess a candidate's experience. Keep your questions and answers to 1 or 2 sentences. Provide your answer in html details/summary form. For example: <details><summary>What are the primary colors?</summary>Red, Blue, and Yellow</details>. Place all the answer in a valid html file
-```
+> `You are a [INSERT LANGUAGE] expert doing tech interviews. Come up with 20 questions and answers that you would use in a typical interview to assess a candidate's experience. Keep your questions and answers to 1 or 2 sentences. Provide your answer in html details/summary form. For example: <details><summary>What are the primary colors?</summary>Red, Blue, and Yellow</details>. Place all the answer in a valid html file`
 
 _This is a basic prompt, but changing the question count, difficulty, and answer length are some variables you might want to experiment with_
 
@@ -62,9 +60,7 @@ Adding just a bit of css can help make it easier to read
 
 Remember the warning at the beginning about never trusting ChatGPT? You can add a link to the docs by updating the prompt with somethign like this:
 
-```
-If possible provide a link to the documentation for the topic. Provide your answer in html details/summary form. For example: <details><summary>What are the primary colors?</summary><p class="answer>Red, Blue, and Yellow<p><p class="link"><a href="[link to documentation]">documentation</a></p></details>
-```
+> `If possible provide a link to the documentation for the topic. Provide your answer in html details/summary form. For example: <details><summary>What are the primary colors?</summary><p class="answer>Red, Blue, and Yellow<p><p class="link"><a href="[link to documentation]">documentation</a></p></details>`
 
 ## Mind the GPT Limits
 
@@ -80,9 +76,7 @@ I decided to convert the results to json so I could save them and then load and 
 
 Here is my final prompt:
 
-```
-You are a [INSERT LANGUAGE] expert doing tech interviews. Come up with 20 questions and answers that you would use in a typical interview to assess a candidate's experience. Keep your questions and answers to 1 or 2 sentences. If possible provide a link to the documentation for the topic. Provide your answers in Json format for example: { "question" : "What are the primary colors?", "answer" : "Red, Yellow, and Blue", "links" : [{ "title": [documentation title], "link" : [link to documentation]}] } and combine all those into an array under json key "questions"
-```
+> `You are a [INSERT LANGUAGE] expert doing tech interviews. Come up with 20 questions and answers that you would use in a typical interview to assess a candidate's experience. Keep your questions and answers to 1 or 2 sentences. If possible provide a link to the documentation for the topic. Provide your answers in Json format for example: { "question" : "What are the primary colors?", "answer" : "Red, Yellow, and Blue", "links" : [{ "title": [documentation title], "link" : [link to documentation]}] } and combine all those into an array under json key "questions"`
 
 ## Finishing up
 
