@@ -10,7 +10,7 @@ Here's a peek at the end result, a set of ChatGPT generated questions and answer
 
 ## Motivation
 
-While prepping for some coding interviews, I wanted to refresh my knowledge of some languages I hadn't used in awhile. Instead of reading all the docs, I thought ChatGPT might do a good job of coming up with some quick topics to review and if you asked it to format it with the [details disclosure element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) you'd have instant flashcards.
+I wanted to refresh my knowledge of some languages I hadn't used in awhile. Instead of reading all the docs, I thought ChatGPT might do a good job of coming up with some quick topics to review and if you asked it to format it with the [details disclosure element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) you'd have instant flashcards.
 
 ## Basic Plan
 
@@ -64,7 +64,7 @@ Remember the warning at the beginning about never trusting ChatGPT? You can add 
 
 ## Mind the GPT Limits
 
-As you add more formatting or increase the question count, you might noticed ChatGPT stopping mid answer, just click the continue generating button to ge the full answer
+As you add more formatting or increase the question count, you might notice ChatGPT stopping mid answer, just click the continue generating button to get the full output.
 
 ![Alt text](./imgs/continue.png)
 
@@ -80,4 +80,4 @@ Here is my final prompt:
 
 ## Finishing up
 
-You can find a simple final example in [exampe.html](example.html). Nothing fancy, but the goal is a simple way to make some flashcards, not make a polished system for them.
+You can find a very simple final example in [exampe.html](example.html)
