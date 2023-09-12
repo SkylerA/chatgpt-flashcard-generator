@@ -6,7 +6,9 @@
 
 Here's a peek at the end result, a set of ChatGPT generated questions and answers with links to documentation for further learning.
 
-![Alt text](./imgs/final.png)
+![Final Result Image](./imgs/final.png)
+
+[Live Version](https://skylera.github.io/chatgpt-flashcard-generator/)
 
 ## Motivation
 
