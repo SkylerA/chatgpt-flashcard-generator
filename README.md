@@ -80,4 +80,4 @@ Here is my final prompt:
 
 ## Finishing up
 
-You can find a very simple final example in [exampe.html](example.html)
+You can find a very simple final example in [index.html](index.html)
