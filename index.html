@@ -9,31 +9,41 @@
 </head>
 
 <body>
-    <details>
-        <summary>How to</summary>
-        <p>
-            Use the following prompt on ChatGPT (click continue generating if it stops midway through), save the result
-            as a .json then click choose file to load json and generate cards.
-        </p>
-        <p class="prompt">
-            You are a [INSERT LANGUAGE] expert doing tech interviews. Come up with 20 questions and answers that you
-            would use in a typical interview to assess a candidate's experience. Keep your questions and answers to 1 or
-            2 sentences. If possible provide a link to the documentation for the topic. Provide your answers in Json
-            format for example: { "question" : "What are the primary colors?", "answer" : "Red, Yellow, and Blue",
-            "links" : [{ "title": [documentation title], "link" : [link to documentation]}] } and combine all those into
-            an array under json key "questions"
-        </p>
-    </details>
-    <div>
-        <input type="file" id="jsonFilePicker" accept=".json">
-    </div>
-    <div id="questions"></div>
+    <main>
+        <section id="intro">
+            <details>
+                <summary>How to gnerate JSON</summary>
+                <p>
+                    Use the following prompt on ChatGPT (click continue generating if it stops midway through), save the
+                    result
+                    as a .json then click choose file to load json and generate cards.
+                </p>
+                <p class="prompt">
+                    You are a [INSERT LANGUAGE] expert doing tech interviews. Come up with 20 questions and answers that
+                    you would use in a typical interview to assess a candidate's experience. Keep your questions and
+                    answers
+                    to 1 or 2 sentences. If possible provide a link to the documentation for the topic. Provide your
+                    answers in
+                    Json format for example: { "question" : "What are the primary colors?", "answer" : "Red, Yellow, and
+                    Blue", "links" : [{ "title": [documentation title], "link" : [link to documentation]}] } and combine
+                    all
+                    those into an array under json key "questions"
+                </p>
+            </details>
+            <input type="file" id="jsonFilePicker" accept=".json">
+            <button onclick="loadJson()">Load JSON File</button>
+            <p>OR</p>
+            <textarea id="jsonEdit" placeholder="Paste your JSON here"></textarea>
+        </section>
+        <div id="questions"></div>
+    </main>
 
     <script>
         function createHTMLFromJSON(data) {
             const outputDiv = document.querySelector("#questions");
 
             try {
+                outputDiv.textContent = "";
                 data.questions.forEach((json, index) => {
                     const details = document.createElement("details");
                     const summary = document.createElement("summary");
@@ -64,6 +74,15 @@
             }
         }
 
+        function loadJson() {
+            const picker = document.querySelector('#jsonFilePicker');
+            if (picker) {
+                picker.click();
+            } else {
+                console.error("Failed to locate file picker #jsonFilePicker")
+            }
+        }
+
         function jsonToQuestionsHandler(event) {
             try {
                 const json = JSON.parse(event.target.result);
@@ -74,10 +93,15 @@
             }
         }
 
-        const picker = document.querySelector('#jsonFilePicker');
+        function handleJsonEdit(event) {
+            console.log(event)
 
-        picker.addEventListener('change', function () {
-            const files = Array.from(this.files);
+        }
+
+        // Handle json file being loaded
+        const picker = document.querySelector('#jsonFilePicker');
+        picker.onchange = (event) => {
+            const files = Array.from(event.target.files);
 
             const jsonFile = files[0];
             console.log(jsonFile);
@@ -86,7 +110,15 @@
                 reader.onload = jsonToQuestionsHandler;
                 reader.readAsText(jsonFile);
             }
-        })
+        };
+
+        const jsonText = document.querySelector('#jsonEdit');
+        jsonText.oninput = (event) => {
+            try {
+                const json = JSON.parse(event.target.value);
+                createHTMLFromJSON(json);
+            } catch { }
+        }
 
     </script>
 </body>
