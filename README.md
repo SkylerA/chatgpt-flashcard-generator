@@ -8,7 +8,7 @@ Here's a peek at the end result, a set of ChatGPT generated questions and answer
 
 ![Final Result Image](./imgs/final.png)
 
-[Live Version](https://skylera.github.io/chatgpt-flashcard-generator/)
+If you just want to generate some flash cards right now, you can try the [Live Version](https://skylera.github.io/chatgpt-flashcard-generator/). Copy the prompt from the How To section, use the prompt in chatGpt, and then paste or load your results on the page.
 
 ## Motivation
 
@@ -79,6 +79,8 @@ I decided to convert the results to json so I could save them and then load and 
 Here is my final prompt:
 
 > `You are a [INSERT LANGUAGE] expert doing tech interviews. Come up with 20 questions and answers that you would use in a typical interview to assess a candidate's experience. Keep your questions and answers to 1 or 2 sentences. If possible provide a link to the documentation for the topic. Provide your answers in Json format for example: { "question" : "What are the primary colors?", "answer" : "Red, Yellow, and Blue", "links" : [{ "title": [documentation title], "link" : [link to documentation]}] } and combine all those into an array under json key "questions"`
+
+Further steps to make this a better study method might be to display 1 card at a time, randomize the card selection, and provide confidence/assessment tracking so that you can phase out questions you no longer need to study.
 
 ## Finishing up
 
