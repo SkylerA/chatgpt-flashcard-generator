@@ -8,7 +8,9 @@ Here's a peek at the end result, a set of ChatGPT generated questions and answer
 
 ![Final Result Image](./imgs/final.png)
 
-If you just want to generate some flash cards right now, you can try the [Live Version](https://skylera.github.io/chatgpt-flashcard-generator/). Copy the prompt from the How To section, use the prompt in chatGpt, and then paste or load your results on the page.
+## Live Version
+
+If you just want to generate some flash cards right now, you can try the [**Live Version**](https://skylera.github.io/chatgpt-flashcard-generator/). Copy the prompt from the How To section, use the prompt in chatGpt, and then paste or load your results on the page.
 
 ## Motivation
 
